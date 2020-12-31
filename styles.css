@@ -64,6 +64,18 @@ hr {
   border: none;
 }
 
+.notice {
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  padding: 15px 0px;
+}
+
+.notice a {
+  text-decoration: none;
+  color: steelblue;
+}
+
 section {
   background-color: black;
   text-align: center;

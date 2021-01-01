@@ -2,13 +2,14 @@
 *:before,
 *:after {
   box-sizing: inherit;
-  font-family: "Open Sans", sans-serif;
+  font-family: inherit;
 }
 
 html {
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
   color: white;
+  font-size: 16px;
 }
 
 body {
@@ -22,22 +23,23 @@ hr {
 }
 
 .big-title {
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: bold;
 }
 
 .medium-title {
-  font-size: 36px;
+  font-size: 2rem;
   font-weight: bold;
 }
 
 .small-title {
-  font-size: 24px;
+  font-size: 1.75rem;
   font-weight: normal;
 }
 
 .wide-wrapper {
   width: 100%;
+  min-width: 300px;
   margin: 0 auto;
   background-color: black;
 }
@@ -58,14 +60,14 @@ hr {
   background-color: red;
   border-radius: 4px;
   color: white;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: normal;
   padding: 8px 16px;
   border: none;
 }
 
 .notice {
-  font-size: 30px;
+  font-size: 2rem;
   color: white;
   text-align: center;
   padding: 15px 0px;
@@ -87,7 +89,7 @@ section {
 
 section#sign-up {
   position: relative;
-  height: 1000px;
+  min-height: 1000px;
 }
 
 section#sign-up > div#catalog {
@@ -121,6 +123,7 @@ section#sign-up > #presentation > nav {
   margin-bottom: 100px;
   padding: 25px 60px;
   z-index: 1;
+  text-align: center;
 }
 
 section#sign-up > #presentation > nav > img {
@@ -137,7 +140,7 @@ section#sign-up > #presentation > .thin-wrapper {
 }
 
 section #faq {
-  font-size: 22px;
+  font-size: 1.75rem;
   text-align: left;
 }
 
@@ -196,8 +199,9 @@ section #mobile-demo > img {
 
 .download-notification {
   position: absolute;
-  width: 350px;
-  height: 100px;
+  width: 100%;
+  max-width: 350px;
+  max-height: 100px;
   margin-left: auto;
   margin-right: auto;
   left: 0;
@@ -213,7 +217,7 @@ section #mobile-demo > img {
 }
 
 .download-notification > img {
-  height: 75px;
+  height: 70px;
 }
 
 .download-notification p:nth-of-type(1) {
@@ -222,7 +226,7 @@ section #mobile-demo > img {
 
 .download-notification p:nth-of-type(2) {
   color: steelblue;
-  font-size: 14px;
+  font-size: 0.8rem;
   margin-top: 0px;
 }
 
@@ -244,7 +248,7 @@ section #mobile-demo > img {
 }
 
 footer {
-  font-size: 15px;
+  font-size: 1rem;
   color: #555555;
   padding: 40px 0;
 }
@@ -254,6 +258,81 @@ footer select {
   color: #555555;
   padding: 10px;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 1rem;
   outline: none;
+}
+
+@media (max-width: 300px) {
+  html {
+    font-size: 11px;
+  }
+  .download-notification {
+    display: none;
+  }
+  section#sign-up > #presentation > nav {
+    margin-bottom: 0px;
+  }
+
+  section#sign-up > #presentation > nav > img {
+    float: none;
+  }
+
+  section#sign-up > #presentation > nav > .button {
+    float: none;
+    display: block;
+    margin: 15px auto;
+  }
+}
+
+@media (min-width: 301px) and (max-width: 400px) {
+  html {
+    font-size: 11px;
+  }
+
+  .download-notification {
+    padding: 0px 5px;
+    bottom: 0%;
+  }
+
+  .download-notification > img {
+    height: 40px;
+  }
+
+  .download-notification p:nth-of-type(1) {
+    margin: 0;
+    font-size: 0.7rem;
+  }
+
+  .download-notification p:nth-of-type(2) {
+    margin: 0;
+    font-size: 0.7rem;
+  }
+
+  section#sign-up > #presentation > nav {
+    margin-bottom: 0px;
+  }
+
+  section#sign-up > #presentation > nav > img {
+    float: none;
+  }
+
+  section#sign-up > #presentation > nav > .button {
+    float: none;
+    display: block;
+    margin: 15px auto;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 600px) {
+  html {
+    font-size: 13px;
+  }
+
+  .download-notification {
+    padding: 0px 5px;
+  }
+
+  .download-notification > img {
+    height: 45px;
+  }
 }
